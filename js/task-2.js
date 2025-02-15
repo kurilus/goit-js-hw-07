@@ -29,13 +29,8 @@ const gallery = document.querySelector('.gallery');
 
 const galleryMarkup = images
   .map(({ url, alt }) => {
-    return `<li class="gallery-item" style="list-style: none; margin: 10px;"><img src="${url}" alt="${alt}" style="display: block; max-width: 100%; height: auto; border-radius: 8px;"></li>`;
+    return `<li class="gallery-item"><img src="${url}" alt="${alt}"></li>`;
   })
   .join('');
 
 gallery.insertAdjacentHTML('beforeend', galleryMarkup);
-
-gallery.style.display = 'flex';
-gallery.style.flexWrap = 'wrap';
-gallery.style.gap = '24px';
-gallery.style.justifyContent = 'center';
